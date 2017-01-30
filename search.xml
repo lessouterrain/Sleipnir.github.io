@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title><![CDATA[test.md]]></title>
+      <url>http://kaimaris.com/2017/01/30/test-md-1/</url>
+      <content type="html"><![CDATA[<p>this is a post for test webhooks</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[test.md]]></title>
+      <url>http://kaimaris.com/2017/01/30/test-md/</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[2016 and 2017]]></title>
       <url>http://kaimaris.com/2017/01/01/2016-and-2017/</url>
       <content type="html"><![CDATA[<p>想了想还是决定写写过去的这一年以及已经到来的2017。虽然可能会比较杂碎。<br>刚刚翻了一下这个Blog，才发现它也已经2年了，而我到德国甚至已经3年有余了。时间过得好快。</p>
