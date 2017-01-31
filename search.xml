@@ -7,6 +7,7 @@
       <title><![CDATA[迁移Blog至Digital Ocean VPS （准备篇）]]></title>
       <url>http://kaimaris.com/2017/01/31/Push-Hexo-Blog-to-DigitalOcean-Vps/</url>
       <content type="html"><![CDATA[<h2 id="故事的开始"><a href="#故事的开始" class="headerlink" title="故事的开始"></a>故事的开始</h2><p>首先会起意弄个VPS其实是因为想给博客换HTTPS，但CloudFlare总还是觉得不放心，便干脆租了个VPS。</p>
+<a id="more"></a>
 <h3 id="VPS的选择"><a href="#VPS的选择" class="headerlink" title="VPS的选择"></a>VPS的选择</h3><p>这个其实没那么复杂，大的VPS服务商也就那么几家，因为Github的学生包会送$50 Digital Ocean的优惠，加上对于一个静态博客来说，最便宜的$5/Month 的就足够用了。于是便开始着手折腾。如果你不是学生没法申请 Student Pack，我这边也有个$10的<a href="https://m.do.co/c/60ff28498596" target="_blank" rel="external">优惠码</a>，虽然是一点点的优惠，但对$5/Month的包姑且也能试用2月的服务。</p>
 <h3 id="申请Github学生包"><a href="#申请Github学生包" class="headerlink" title="申请Github学生包"></a>申请Github学生包</h3><p>这个对于学生党来说相当的实惠。直接google Github student pack就能看到页面。首先必须的是教育机构的邮箱。通常来说多为.edu 结尾，日本不少大学是.ac.jp，德国大学邮箱后缀多为.de，等等。这个太大关系，一般来说正规高等教育机构的邮箱都很好用。按照网页填好姓名，邮箱，大学名称。然后是最后一项理由。这个我填的时候稍稍纠结了一下，因为实在是编不出很多冠冕堂皇的话来，就只填了两句。本来查教程的时候看到大约是几个小时到几天不等，甚至有不少被拒的情况，还有些担心理由不充分不给过。结果不到20分钟Github就发来了邮件告诉我申请成功，确实是意料之外。个人觉得，基本只要能确认是学生身份就会给的。<br>发来的邮件里第二条链接就是获取我们所要的 Student Pack，点击进入后能发现一大串各类服务的优惠。往下拉找到Digital Oceand 链接，点击然后记得复制学生优惠的激活码，并点击下方的链接跳转至 Digital Ocean 的网页。</p>
 <h3 id="Digital-Ocean-VPS的购买"><a href="#Digital-Ocean-VPS的购买" class="headerlink" title="Digital Ocean VPS的购买"></a>Digital Ocean VPS的购买</h3><p>跳转到的主页上就有个注册用的填写框，下面有个 Create Account。</p>
