@@ -1,341 +1,211 @@
-
-
 <!DOCTYPE html>
-<html lang="EN-us">
-<head prefix="og: http://ogp.me/ns#">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <meta name="description" content="null">
-    <title>迁移Blog至Digital Ocean VPS （准备篇） | Maris</title>
-
-    <!-- Open Graph -->
-    <meta name="description" content="&amp;#x6545;&amp;#x4E8B;&amp;#x7684;&amp;#x5F00;&amp;#x59CB;&amp;#x9996;&amp;#x5148;&amp;#x4F1A;&amp;#x8D77;&amp;#x610F;&amp;#x5F04;&amp;#x4E2A;VPS&amp;#x5176;&amp;#x5B9E;&amp;#x662F;&amp;#x56E0;&amp;#x4E3A;&amp;#x60F3;&amp;#x7ED9;&amp;#x535A;&amp;#x5BA2;&amp;#x6362;HTTPS&amp;#xFF0C;&amp;#x4F46;">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <title>迁移Blog至Digital Ocean VPS （准备篇） | Maris</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="故事的开始首先会起意弄个VPS其实是因为想给博客换HTTPS，但CloudFlare总还是觉得不放心，便干脆租了个VPS。
+VPS的选择这个其实没那么复杂，大的VPS服务商也就那么几家，因为Github的学生包会送$50 Digital Ocean的优惠，加上对于一个静态博客来说，最便宜的$5/Month 的就足够用了。于是便开始着手折腾。如果你不是学生没法申请 Student Pack，我这边也">
 <meta property="og:type" content="article">
 <meta property="og:title" content="迁移Blog至Digital Ocean VPS （准备篇）">
 <meta property="og:url" content="http://kaimaris.com/2017/01/31/Push-Hexo-Blog-to-DigitalOcean-Vps/index.html">
 <meta property="og:site_name" content="Maris">
-<meta property="og:description" content="&amp;#x6545;&amp;#x4E8B;&amp;#x7684;&amp;#x5F00;&amp;#x59CB;&amp;#x9996;&amp;#x5148;&amp;#x4F1A;&amp;#x8D77;&amp;#x610F;&amp;#x5F04;&amp;#x4E2A;VPS&amp;#x5176;&amp;#x5B9E;&amp;#x662F;&amp;#x56E0;&amp;#x4E3A;&amp;#x60F3;&amp;#x7ED9;&amp;#x535A;&amp;#x5BA2;&amp;#x6362;HTTPS&amp;#xFF0C;&amp;#x4F46;">
+<meta property="og:description" content="故事的开始首先会起意弄个VPS其实是因为想给博客换HTTPS，但CloudFlare总还是觉得不放心，便干脆租了个VPS。
+VPS的选择这个其实没那么复杂，大的VPS服务商也就那么几家，因为Github的学生包会送$50 Digital Ocean的优惠，加上对于一个静态博客来说，最便宜的$5/Month 的就足够用了。于是便开始着手折腾。如果你不是学生没法申请 Student Pack，我这边也">
 <meta property="og:updated_time" content="2017-01-31T01:51:02.657Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="迁移Blog至Digital Ocean VPS （准备篇）">
-<meta name="twitter:description" content="&amp;#x6545;&amp;#x4E8B;&amp;#x7684;&amp;#x5F00;&amp;#x59CB;&amp;#x9996;&amp;#x5148;&amp;#x4F1A;&amp;#x8D77;&amp;#x610F;&amp;#x5F04;&amp;#x4E2A;VPS&amp;#x5176;&amp;#x5B9E;&amp;#x662F;&amp;#x56E0;&amp;#x4E3A;&amp;#x60F3;&amp;#x7ED9;&amp;#x535A;&amp;#x5BA2;&amp;#x6362;HTTPS&amp;#xFF0C;&amp;#x4F46;">
-
-    <script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Person",
-  "email": "mailto:undefined",
-  "image": "undefined",
-  "name": "KAI_",
-  "url": "http://kaimaris.com"
-}
-</script>
-    <script>
-    var algoliaEnabled = false;
-    
-</script>
-
-    
-
-    
-    
-        <link href="https://fonts.gmirror.org/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-    
-    
-    
-        <!-- stylesheets list from config.yml -->
-        
-        <link rel="stylesheet" href="/css/aloha.css">
-        
-        <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.css">
-        
-        <link rel="stylesheet" href="//cdn.bootcss.com/magnific-popup.js/1.1.0/magnific-popup.min.css">
-        
-    
-
+<meta name="twitter:description" content="故事的开始首先会起意弄个VPS其实是因为想给博客换HTTPS，但CloudFlare总还是觉得不放心，便干脆租了个VPS。
+VPS的选择这个其实没那么复杂，大的VPS服务商也就那么几家，因为Github的学生包会送$50 Digital Ocean的优惠，加上对于一个静态博客来说，最便宜的$5/Month 的就足够用了。于是便开始着手折腾。如果你不是学生没法申请 Student Pack，我这边也">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/typing.css">
 </head>
-<body id="body" style="margin-bottom: 0;" class="pushable">
 
-    <div class="ui top fixed menu">
-        <a class="item" id="menu-icon"><i class="sidebar icon"></i></a>
-    </div>
+  
+    <body>
+  
+      <div id="container" class="container">
+        <article id="post-Push-Hexo-Blog-to-DigitalOcean-Vps" class="article article-type-post" itemscope itemprop="blogPost">
+  <header id="header" class="header">
+  <nav id="main-nav" class="main-nav">
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+      <a class="main-nav-link" href="/about">About</a>
+    
+      <a class="main-nav-link" href="/rss2.xml">Rss</a>
+    
+  </nav>
+  <nav id="sub-nav">
+    
+  </nav>
+</header>
 
-    <div id="menu-sidebar" class="ui left vertical sidebar menu">
-
-    <div id="sidebar-top">
-        <div class="content">
-            <h3>Maris</h3>
-        </div>
-    </div>
-    <div class="ui container sidebar-card">
-    <div class="ui people shape content">
-        <div class="active side">
-            <div class="ui card">
-                <div class="image">
-                    <img class="ui medium bordered image" src="/images/avatar.jpg">
-                </div>
-                <div class="content">
-                    <a class="header">KAI_</a>
-                    
-                </div>
-                <div class="extra content">
-                    <div class="ui list">
-                        
-                        
-                    </div>
-
-                </div>
-                <div class="extra content">
-                    <div class="ui list">
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-</div>
-
+  <hr/>
+  <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      迁移Blog至Digital Ocean VPS （准备篇）
+    </h1>
+  
 
+      </header>
     
-
-    
-    <a href="/index.html" class="item" >
-        <i class="home icon"></i>
-        HOME
-    </a>
-
-    
-    
-
-    
-
-    
-    <a href="/atom.xml" class="item" >
-        <i class="rss icon"></i>
-        FEED
-    </a>
-
-    
-    
-
-    
-
-    
-    <a href="/archives" class="item" >
-        <i class="archive icon"></i>
-        ARCHIVE
-    </a>
-
-    
-    
-
-    
-
-    
-    <a href="/about" class="item" >
-        <i class="user icon"></i>
-        关于
-    </a>
-
-    
-
-    
-</div>
-
-    <div class="pusher body-content">
-        <div id="content" class="ui main container">
-            <!--<div class="ui one column grid">-->
-                <!--<div class="column">-->
-                    <!--<div class="ui main container">-->
-                        <div id="post-Push-Hexo-Blog-to-DigitalOcean-Vps" class="ui main container article-type-post">
-
-    
-
-    <div class="ui divided grid">
-
-        <div class="two column row" id="article-content">
-
-            <div class="thirteen wide computer thirteen wide tablet sixteen wide mobile column">
-                
-
-<h1 class="ui header">
-    
-    迁移Blog至Digital Ocean VPS （准备篇）
-</h1>
-
-
-
-                <div class="article-inner">
-
-                    <div class="article-entry" itemprop="articleBody">
-                        
-                        <h2 id="&#x6545;&#x4E8B;&#x7684;&#x5F00;&#x59CB;"><a href="#&#x6545;&#x4E8B;&#x7684;&#x5F00;&#x59CB;" class="headerlink" title="&#x6545;&#x4E8B;&#x7684;&#x5F00;&#x59CB;"></a>&#x6545;&#x4E8B;&#x7684;&#x5F00;&#x59CB;</h2><p>&#x9996;&#x5148;&#x4F1A;&#x8D77;&#x610F;&#x5F04;&#x4E2A;VPS&#x5176;&#x5B9E;&#x662F;&#x56E0;&#x4E3A;&#x60F3;&#x7ED9;&#x535A;&#x5BA2;&#x6362;HTTPS&#xFF0C;&#x4F46;CloudFlare&#x603B;&#x8FD8;&#x662F;&#x89C9;&#x5F97;&#x4E0D;&#x653E;&#x5FC3;&#xFF0C;&#x4FBF;&#x5E72;&#x8106;&#x79DF;&#x4E86;&#x4E2A;VPS&#x3002;</p>
-<h3 id="VPS&#x7684;&#x9009;&#x62E9;"><a href="#VPS&#x7684;&#x9009;&#x62E9;" class="headerlink" title="VPS&#x7684;&#x9009;&#x62E9;"></a>VPS&#x7684;&#x9009;&#x62E9;</h3><p>&#x8FD9;&#x4E2A;&#x5176;&#x5B9E;&#x6CA1;&#x90A3;&#x4E48;&#x590D;&#x6742;&#xFF0C;&#x5927;&#x7684;VPS&#x670D;&#x52A1;&#x5546;&#x4E5F;&#x5C31;&#x90A3;&#x4E48;&#x51E0;&#x5BB6;&#xFF0C;&#x56E0;&#x4E3A;Github&#x7684;&#x5B66;&#x751F;&#x5305;&#x4F1A;&#x9001;$50 Digital Ocean&#x7684;&#x4F18;&#x60E0;&#xFF0C;&#x52A0;&#x4E0A;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x9759;&#x6001;&#x535A;&#x5BA2;&#x6765;&#x8BF4;&#xFF0C;&#x6700;&#x4FBF;&#x5B9C;&#x7684;$5/Month &#x7684;&#x5C31;&#x8DB3;&#x591F;&#x7528;&#x4E86;&#x3002;&#x4E8E;&#x662F;&#x4FBF;&#x5F00;&#x59CB;&#x7740;&#x624B;&#x6298;&#x817E;&#x3002;&#x5982;&#x679C;&#x4F60;&#x4E0D;&#x662F;&#x5B66;&#x751F;&#x6CA1;&#x6CD5;&#x7533;&#x8BF7; Student Pack&#xFF0C;&#x6211;&#x8FD9;&#x8FB9;&#x4E5F;&#x6709;&#x4E2A;$10&#x7684;<a href="https://m.do.co/c/60ff28498596" target="_blank" rel="external">&#x4F18;&#x60E0;&#x7801;</a>&#xFF0C;&#x867D;&#x7136;&#x662F;&#x4E00;&#x70B9;&#x70B9;&#x7684;&#x4F18;&#x60E0;&#xFF0C;&#x4F46;&#x5BF9;$5/Month&#x7684;&#x5305;&#x59D1;&#x4E14;&#x4E5F;&#x80FD;&#x8BD5;&#x7528;2&#x6708;&#x7684;&#x670D;&#x52A1;&#x3002;</p>
-<h3 id="&#x7533;&#x8BF7;Github&#x5B66;&#x751F;&#x5305;"><a href="#&#x7533;&#x8BF7;Github&#x5B66;&#x751F;&#x5305;" class="headerlink" title="&#x7533;&#x8BF7;Github&#x5B66;&#x751F;&#x5305;"></a>&#x7533;&#x8BF7;Github&#x5B66;&#x751F;&#x5305;</h3><p>&#x8FD9;&#x4E2A;&#x5BF9;&#x4E8E;&#x5B66;&#x751F;&#x515A;&#x6765;&#x8BF4;&#x76F8;&#x5F53;&#x7684;&#x5B9E;&#x60E0;&#x3002;&#x76F4;&#x63A5;google Github student pack&#x5C31;&#x80FD;&#x770B;&#x5230;&#x9875;&#x9762;&#x3002;&#x9996;&#x5148;&#x5FC5;&#x987B;&#x7684;&#x662F;&#x6559;&#x80B2;&#x673A;&#x6784;&#x7684;&#x90AE;&#x7BB1;&#x3002;&#x901A;&#x5E38;&#x6765;&#x8BF4;&#x591A;&#x4E3A;.edu &#x7ED3;&#x5C3E;&#xFF0C;&#x65E5;&#x672C;&#x4E0D;&#x5C11;&#x5927;&#x5B66;&#x662F;.ac.jp&#xFF0C;&#x5FB7;&#x56FD;&#x5927;&#x5B66;&#x90AE;&#x7BB1;&#x540E;&#x7F00;&#x591A;&#x4E3A;.de&#xFF0C;&#x7B49;&#x7B49;&#x3002;&#x8FD9;&#x4E2A;&#x592A;&#x5927;&#x5173;&#x7CFB;&#xFF0C;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#x6B63;&#x89C4;&#x9AD8;&#x7B49;&#x6559;&#x80B2;&#x673A;&#x6784;&#x7684;&#x90AE;&#x7BB1;&#x90FD;&#x5F88;&#x597D;&#x7528;&#x3002;&#x6309;&#x7167;&#x7F51;&#x9875;&#x586B;&#x597D;&#x59D3;&#x540D;&#xFF0C;&#x90AE;&#x7BB1;&#xFF0C;&#x5927;&#x5B66;&#x540D;&#x79F0;&#x3002;&#x7136;&#x540E;&#x662F;&#x6700;&#x540E;&#x4E00;&#x9879;&#x7406;&#x7531;&#x3002;&#x8FD9;&#x4E2A;&#x6211;&#x586B;&#x7684;&#x65F6;&#x5019;&#x7A0D;&#x7A0D;&#x7EA0;&#x7ED3;&#x4E86;&#x4E00;&#x4E0B;&#xFF0C;&#x56E0;&#x4E3A;&#x5B9E;&#x5728;&#x662F;&#x7F16;&#x4E0D;&#x51FA;&#x5F88;&#x591A;&#x51A0;&#x5195;&#x5802;&#x7687;&#x7684;&#x8BDD;&#x6765;&#xFF0C;&#x5C31;&#x53EA;&#x586B;&#x4E86;&#x4E24;&#x53E5;&#x3002;&#x672C;&#x6765;&#x67E5;&#x6559;&#x7A0B;&#x7684;&#x65F6;&#x5019;&#x770B;&#x5230;&#x5927;&#x7EA6;&#x662F;&#x51E0;&#x4E2A;&#x5C0F;&#x65F6;&#x5230;&#x51E0;&#x5929;&#x4E0D;&#x7B49;&#xFF0C;&#x751A;&#x81F3;&#x6709;&#x4E0D;&#x5C11;&#x88AB;&#x62D2;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x8FD8;&#x6709;&#x4E9B;&#x62C5;&#x5FC3;&#x7406;&#x7531;&#x4E0D;&#x5145;&#x5206;&#x4E0D;&#x7ED9;&#x8FC7;&#x3002;&#x7ED3;&#x679C;&#x4E0D;&#x5230;20&#x5206;&#x949F;Github&#x5C31;&#x53D1;&#x6765;&#x4E86;&#x90AE;&#x4EF6;&#x544A;&#x8BC9;&#x6211;&#x7533;&#x8BF7;&#x6210;&#x529F;&#xFF0C;&#x786E;&#x5B9E;&#x662F;&#x610F;&#x6599;&#x4E4B;&#x5916;&#x3002;&#x4E2A;&#x4EBA;&#x89C9;&#x5F97;&#xFF0C;&#x57FA;&#x672C;&#x53EA;&#x8981;&#x80FD;&#x786E;&#x8BA4;&#x662F;&#x5B66;&#x751F;&#x8EAB;&#x4EFD;&#x5C31;&#x4F1A;&#x7ED9;&#x7684;&#x3002;<br>&#x53D1;&#x6765;&#x7684;&#x90AE;&#x4EF6;&#x91CC;&#x7B2C;&#x4E8C;&#x6761;&#x94FE;&#x63A5;&#x5C31;&#x662F;&#x83B7;&#x53D6;&#x6211;&#x4EEC;&#x6240;&#x8981;&#x7684; Student Pack&#xFF0C;&#x70B9;&#x51FB;&#x8FDB;&#x5165;&#x540E;&#x80FD;&#x53D1;&#x73B0;&#x4E00;&#x5927;&#x4E32;&#x5404;&#x7C7B;&#x670D;&#x52A1;&#x7684;&#x4F18;&#x60E0;&#x3002;&#x5F80;&#x4E0B;&#x62C9;&#x627E;&#x5230;Digital Oceand &#x94FE;&#x63A5;&#xFF0C;&#x70B9;&#x51FB;&#x7136;&#x540E;&#x8BB0;&#x5F97;&#x590D;&#x5236;&#x5B66;&#x751F;&#x4F18;&#x60E0;&#x7684;&#x6FC0;&#x6D3B;&#x7801;&#xFF0C;&#x5E76;&#x70B9;&#x51FB;&#x4E0B;&#x65B9;&#x7684;&#x94FE;&#x63A5;&#x8DF3;&#x8F6C;&#x81F3; Digital Ocean &#x7684;&#x7F51;&#x9875;&#x3002;</p>
-<h3 id="Digital-Ocean-VPS&#x7684;&#x8D2D;&#x4E70;"><a href="#Digital-Ocean-VPS&#x7684;&#x8D2D;&#x4E70;" class="headerlink" title="Digital Ocean VPS&#x7684;&#x8D2D;&#x4E70;"></a>Digital Ocean VPS&#x7684;&#x8D2D;&#x4E70;</h3><p>&#x8DF3;&#x8F6C;&#x5230;&#x7684;&#x4E3B;&#x9875;&#x4E0A;&#x5C31;&#x6709;&#x4E2A;&#x6CE8;&#x518C;&#x7528;&#x7684;&#x586B;&#x5199;&#x6846;&#xFF0C;&#x4E0B;&#x9762;&#x6709;&#x4E2A; Create Account&#x3002;</p>
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <h2 id="故事的开始"><a href="#故事的开始" class="headerlink" title="故事的开始"></a>故事的开始</h2><p>首先会起意弄个VPS其实是因为想给博客换HTTPS，但CloudFlare总还是觉得不放心，便干脆租了个VPS。</p>
+<h3 id="VPS的选择"><a href="#VPS的选择" class="headerlink" title="VPS的选择"></a>VPS的选择</h3><p>这个其实没那么复杂，大的VPS服务商也就那么几家，因为Github的学生包会送$50 Digital Ocean的优惠，加上对于一个静态博客来说，最便宜的$5/Month 的就足够用了。于是便开始着手折腾。如果你不是学生没法申请 Student Pack，我这边也有个$10的<a href="https://m.do.co/c/60ff28498596" target="_blank" rel="external">优惠码</a>，虽然是一点点的优惠，但对$5/Month的包姑且也能试用2月的服务。</p>
+<h3 id="申请Github学生包"><a href="#申请Github学生包" class="headerlink" title="申请Github学生包"></a>申请Github学生包</h3><p>这个对于学生党来说相当的实惠。直接google Github student pack就能看到页面。首先必须的是教育机构的邮箱。通常来说多为.edu 结尾，日本不少大学是.ac.jp，德国大学邮箱后缀多为.de，等等。这个太大关系，一般来说正规高等教育机构的邮箱都很好用。按照网页填好姓名，邮箱，大学名称。然后是最后一项理由。这个我填的时候稍稍纠结了一下，因为实在是编不出很多冠冕堂皇的话来，就只填了两句。本来查教程的时候看到大约是几个小时到几天不等，甚至有不少被拒的情况，还有些担心理由不充分不给过。结果不到20分钟Github就发来了邮件告诉我申请成功，确实是意料之外。个人觉得，基本只要能确认是学生身份就会给的。<br>发来的邮件里第二条链接就是获取我们所要的 Student Pack，点击进入后能发现一大串各类服务的优惠。往下拉找到Digital Oceand 链接，点击然后记得复制学生优惠的激活码，并点击下方的链接跳转至 Digital Ocean 的网页。</p>
+<h3 id="Digital-Ocean-VPS的购买"><a href="#Digital-Ocean-VPS的购买" class="headerlink" title="Digital Ocean VPS的购买"></a>Digital Ocean VPS的购买</h3><p>跳转到的主页上就有个注册用的填写框，下面有个 Create Account。</p>
 <blockquote>
-<p>&#x6CE8;&#x610F;&#xFF01;&#xFF01;<br>&#x8FD9;&#x8FB9;&#x6839;&#x636E;<a href="http://jfamily.me/blog/2016/04/23/github-student-digitalocean/" target="_blank" rel="external">JFamily&#x7684;&#x535A;&#x6587;</a>&#x91CC;&#x7684;&#x63D0;&#x793A;&#xFF0C;&#x4E0D;&#x8981;&#x70B9;&#x53F3;&#x4E0A;&#x89D2;&#x7684; Sign up&#xFF0C;&#x90A3;&#x6837;&#x4F60;&#x7684;&#x4F18;&#x60E0;&#x7801;&#x5C31;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x7684;&#x673A;&#x4F1A;&#x4E86;&#x3002;</p>
+<p>注意！！<br>这边根据<a href="http://jfamily.me/blog/2016/04/23/github-student-digitalocean/" target="_blank" rel="external">JFamily的博文</a>里的提示，不要点右上角的 Sign up，那样你的优惠码就没有使用的机会了。</p>
 </blockquote>
-<p>&#x63A5;&#x7740;&#x9009;&#x597D;&#x652F;&#x4ED8;&#x65B9;&#x5F0F;&#xFF0C;Digital Ocean&#x9700;&#x8981;&#x6263;&#x9664;&#x4E00;&#x4E2A;&#x6708;&#x7684;&#x8D39;&#x7528;&#x4F5C;&#x4E3A;&#x62BC;&#x91D1;&#x3002;&#x652F;&#x6301;&#x7684;&#x652F;&#x4ED8;&#x65B9;&#x5F0F;&#x4E3A;&#x4FE1;&#x7528;&#x5361;&#x6216;PayPal&#x3002;&#x662F;&#x7684;&#xFF0C;&#x6CA1;&#x6709;&#x652F;&#x4ED8;&#x5B9D;&#x3002;&#x8BF7;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x5BF9;&#x4F60;&#x6765;&#x8BF4;&#x76F8;&#x5BF9;&#x65B9;&#x4FBF;&#x7684;&#x5427;&#x3002;&#x4F5C;&#x4E3A;&#x7559;&#x5B66;&#x515A;&#x867D;&#x7136;&#x4E24;&#x4E2A;&#x90FD;&#x6709;&#xFF0C;&#x8FD9;&#x91CC;&#x6211;&#x8FD8;&#x662F;&#x9009;&#x62E9;&#x4E86;PayPal&#x3002;&#x5728;&#x5FB7;&#x56FD;&#x626F;&#x5230;&#x94F6;&#x884C;&#x603B;&#x4F1A;&#x662F;&#x4E2A;&#x76F8;&#x5BF9;&#x9EBB;&#x70E6;&#x7684;&#x4E8B;&#x3002;<br>&#x586B;&#x597D;&#x4F18;&#x60E0;&#x7801;&#x4ED8;&#x597D;&#x6B3E;&#x5C31;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;vps&#x7CFB;&#x7EDF;&#x4E86;&#x3002;</p>
-<h2 id="VPS&#x5185;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5B89;&#x88C5;"><a href="#VPS&#x5185;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5B89;&#x88C5;" class="headerlink" title="VPS&#x5185;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5B89;&#x88C5;"></a>VPS&#x5185;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5B89;&#x88C5;</h2><h3 id="&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x9009;&#x62E9;"><a href="#&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x9009;&#x62E9;" class="headerlink" title="&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x9009;&#x62E9;"></a>&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x9009;&#x62E9;</h3><p>Digital Ocean&#x5728;&#x65B0;&#x5EFA;&#x65F6;&#x63D0;&#x4F9B;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x9884;&#x88C5;&#x670D;&#x52A1;&#xFF0C;&#x7686;&#x4E3A;Linux&#x7CFB;&#xFF0C;&#x5982;Ubuntu&#xFF0C;Fedora&#xFF0C;Debian&#xFF0C;CentOS&#x7B49;&#x591A;&#x79CD;&#x9009;&#x62E9;&#x3002;</p>
-<ul class="ui list">
-<li>Fedora&#x662F;&#x8FD9;&#x4E9B;&#x7CFB;&#x7EDF;&#x91CC;&#x76F8;&#x5BF9;&#x6765;&#x8BF4;&#x6BD4;&#x8F83;&#x6FC0;&#x8FDB;&#x7684;&#x53D1;&#x884C;&#x7248;&#xFF0C;&#x66F4;&#x65B0;&#x8F83;&#x5FEB;&#x3002;</li>
-<li>Debian &#x548C; CentOS &#x4EE5;&#x7A33;&#x5B9A;&#x79F0;&#x8457;&#xFF0C;&#x591A;&#x88AB;&#x7528;&#x4E0E;&#x670D;&#x52A1;&#x5668;OS</li>
-<li>Ubuntu &#x662F;&#x57FA;&#x4E8E; Debian &#x7684;&#x5546;&#x4E1A;&#x9A71;&#x52A8;&#x7684;&#x53D1;&#x884C;&#x7248;</li>
+<p>接着选好支付方式，Digital Ocean需要扣除一个月的费用作为押金。支持的支付方式为信用卡或PayPal。是的，没有支付宝。请选择一个对你来说相对方便的吧。作为留学党虽然两个都有，这里我还是选择了PayPal。在德国扯到银行总会是个相对麻烦的事。<br>填好优惠码付好款就可以创建vps系统了。</p>
+<h2 id="VPS内的操作系统安装"><a href="#VPS内的操作系统安装" class="headerlink" title="VPS内的操作系统安装"></a>VPS内的操作系统安装</h2><h3 id="操作系统的选择"><a href="#操作系统的选择" class="headerlink" title="操作系统的选择"></a>操作系统的选择</h3><p>Digital Ocean在新建时提供操作系统预装服务，皆为Linux系，如Ubuntu，Fedora，Debian，CentOS等多种选择。</p>
+<ul>
+<li>Fedora是这些系统里相对来说比较激进的发行版，更新较快。</li>
+<li>Debian 和 CentOS 以稳定称著，多被用与服务器OS</li>
+<li>Ubuntu 是基于 Debian 的商业驱动的发行版</li>
 </ul>
-<p>&#x9009;&#x4E00;&#x4E2A;&#x6700;&#x719F;&#x6089;&#x7528;&#x5F97;&#x6700;&#x987A;&#x624B;&#x7684;&#x53D1;&#x884C;&#x7248;&#x5427;&#x3002;</p>
-<h3 id="SSH&#x8FDC;&#x7A0B;&#x767B;&#x5F55;VPS"><a href="#SSH&#x8FDC;&#x7A0B;&#x767B;&#x5F55;VPS" class="headerlink" title="SSH&#x8FDC;&#x7A0B;&#x767B;&#x5F55;VPS"></a>SSH&#x8FDC;&#x7A0B;&#x767B;&#x5F55;VPS</h3><p>&#x63A5;&#x7740;&#x662F;SSH&#x7684;&#x8FDC;&#x7A0B;&#x767B;&#x5F55;&#x7684;&#x8BBE;&#x5B9A;&#x3002;&#x4F60;&#x4F1A;&#x770B;&#x5230;&#x4E00;&#x4E2A;&#x201C;Add SSH Key&#x201D;&#x7684;&#x84DD;&#x8272;&#x6309;&#x94AE;&#x3002;&#x867D;&#x7136;&#x4E4B;&#x540E;&#x4E5F;&#x80FD;&#x5BFC;&#x5165;&#x516C;&#x5319;&#xFF0C;&#x4F46;&#x8FD9;&#x8FB9;&#x5EFA;&#x8BAE;&#x5728;&#x4E00;&#x5F00;&#x59CB;&#x5C31;&#x5148;&#x5BFC;&#x5165;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x8BBE;&#x5B9A;SSH &#x516C;&#x5319;&#xFF0C;Digital Ocean &#x5C06;&#x4F1A;&#x7528;&#x90AE;&#x4EF6;&#x53D1;&#x9001;&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x767B;&#x5F55;&#x7684;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;&#x3002;<br>&#x70B9;&#x5F00;&#x540E;&#x51FA;&#x73B0;&#x4E00;&#x4E2A;&#x7A97;&#x53E3;&#x9700;&#x8981;&#x586B;&#x5199;public key&#x7684;&#x540D;&#x79F0;&#x548C;&#x5185;&#x5BB9;&#xFF0C;&#x5148;&#x653E;&#x7F6E;&#x5728;&#x8FD9;&#x8FB9;&#x3002;</p>
-<h4 id="&#x672C;&#x5730;&#x751F;&#x6210;SSH-Keys"><a href="#&#x672C;&#x5730;&#x751F;&#x6210;SSH-Keys" class="headerlink" title="&#x672C;&#x5730;&#x751F;&#x6210;SSH Keys"></a>&#x672C;&#x5730;&#x751F;&#x6210;SSH Keys</h4><p>&#x5404;Linux&#x548C;Mac OS X&#x7CFB;&#x7EDF;&#x7684;Shell&#x91CC;&#x5DF2;&#x7ECF;&#x5305;&#x542B;&#xFF0C;&#x800C;Windows&#x7CFB;&#x7EDF;&#x5219;&#x9700;&#x8981;<a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" target="_blank" rel="external">PuTTY</a>&#x3002;&#x7531;&#x4E8E;&#x6211;&#x7684;&#x672C;&#x5730;&#x8BA1;&#x7B97;&#x673A;&#x7CFB;&#x7EDF;&#x4E3A; Arch Linux&#xFF0C;&#x4E0B;&#x9762;&#x5219;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;Arch Linux&#x4E0B;&#x7684;&#x6B65;&#x9AA4;&#x3002;<br>&#x9996;&#x5148;&#x751F;&#x6210;SSH&#x7684;RSA&#x516C;&#x5319;&#x548C;&#x79C1;&#x5319;&#x3002;&#x5728;&#x672C;&#x5730;&#x6253;&#x5F00;&#x865A;&#x62DF;&#x7EC8;&#x7AEF;&#xFF0C;&#x8F93;&#x5165;&#xFF1A;</p>
+<p>选一个最熟悉用得最顺手的发行版吧。</p>
+<h3 id="SSH远程登录VPS"><a href="#SSH远程登录VPS" class="headerlink" title="SSH远程登录VPS"></a>SSH远程登录VPS</h3><p>接着是SSH的远程登录的设定。你会看到一个“Add SSH Key”的蓝色按钮。虽然之后也能导入公匙，但这边建议在一开始就先导入。如果没有设定SSH 公匙，Digital Ocean 将会用邮件发送给你一个用于登录的用户名和密码。<br>点开后出现一个窗口需要填写public key的名称和内容，先放置在这边。</p>
+<h4 id="本地生成SSH-Keys"><a href="#本地生成SSH-Keys" class="headerlink" title="本地生成SSH Keys"></a>本地生成SSH Keys</h4><p>各Linux和Mac OS X系统的Shell里已经包含，而Windows系统则需要<a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" target="_blank" rel="external">PuTTY</a>。由于我的本地计算机系统为 Arch Linux，下面则详细介绍Arch Linux下的步骤。<br>首先生成SSH的RSA公匙和私匙。在本地打开虚拟终端，输入：</p>
 <pre><code>cd ~/.ssh
-</code></pre><p>&#x5982;&#x7528;&#x6237;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x5219;&#x5148;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#xFF1A;</p>
-<pre><code>mkdir &#xFF5E;/.ssh
+</code></pre><p>如用户根目录下没有这个文件夹，则先新建一个：</p>
+<pre><code>mkdir ～/.ssh
 cd ~/.ssh
-</code></pre><p>&#x7136;&#x540E;&#x751F;&#x6210;&#x79D8;&#x5319;&#x5BF9;&#xFF1A;</p>
+</code></pre><p>然后生成秘匙对：</p>
 <pre><code>ssh-keygen -t rsa -C &quot;your@email.com&quot;
-</code></pre><p>&#x9ED8;&#x8BA4;&#x540D;&#x79F0;&#x4E3A;id_rsa&#xFF0C;&#x5982;&#x4E0D;&#x4FEE;&#x6539;&#x5219;&#x76F4;&#x63A5;Enter&#xFF0C;&#x7136;&#x540E;&#x8F93;&#x5165;&#x5BC6;&#x7801;&#xFF0C;&#x4E24;&#x904D;&#x3002;</p>
+</code></pre><p>默认名称为id_rsa，如不修改则直接Enter，然后输入密码，两遍。</p>
 <blockquote>
-<p>&#x6CE8;&#x610F;&#xFF01;&#xFF01;<br>&#x8F93;&#x5165;&#x5BC6;&#x7801;&#x7684;&#x65F6;&#x5019;&#x5149;&#x6807;&#x4E0D;&#x4F1A;&#x52A8;&#xFF0C;&#x4F46;&#x7CFB;&#x7EDF;&#x5185;&#x662F;&#x8F93;&#x5165;&#x8FDB;&#x53BB;&#x4E86;&#x7684;&#xFF0C;&#x6CE8;&#x610F;&#x4E24;&#x904D;&#x5BC6;&#x7801;&#x4E00;&#x81F4;&#x3002;</p>
+<p>注意！！<br>输入密码的时候光标不会动，但系统内是输入进去了的，注意两遍密码一致。</p>
 </blockquote>
-<h4 id="&#x6DFB;&#x52A0;SSH&#x516C;&#x5319;"><a href="#&#x6DFB;&#x52A0;SSH&#x516C;&#x5319;" class="headerlink" title="&#x6DFB;&#x52A0;SSH&#x516C;&#x5319;"></a>&#x6DFB;&#x52A0;SSH&#x516C;&#x5319;</h4><p>&#x6B64;&#x65F6;~/.ssh &#x76EE;&#x5F55;&#x4E0B;&#x4F1A;&#x51FA;&#x73B0; id_rsa id_rsa.pub&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x3002;id_rsa&#x662F;&#x79C1;&#x5319;&#xFF0C;&#x8BF7;&#x4E0D;&#x8981;&#x6CC4;&#x9732;&#xFF0C;&#x59A5;&#x5584;&#x4FDD;&#x5B58;&#x3002;&#x5728;&#x7EC8;&#x7AEF;&#x7EE7;&#x7EED;&#x8F93;&#x5165;&#xFF1A;</p>
+<h4 id="添加SSH公匙"><a href="#添加SSH公匙" class="headerlink" title="添加SSH公匙"></a>添加SSH公匙</h4><p>此时~/.ssh 目录下会出现 id_rsa id_rsa.pub两个文件。id_rsa是私匙，请不要泄露，妥善保存。在终端继续输入：</p>
 <pre><code>cat ~/.ssh/id_rsa.pub
-</code></pre><p>&#x5C06;&#x4F1A;&#x51FA;&#x73B0;&#x4E00;&#x957F;&#x4E32;&#x5B57;&#x7B26;&#xFF0C;&#x7ED3;&#x5C3E;&#x662F;&#x4F60;&#x751F;&#x6210;&#x65F6;&#x8F93;&#x5165;&#x7684;&#x90AE;&#x7BB1;&#x5730;&#x5740;&#x3002;&#x5C06;&#x8FD9;&#x566B;&#x957F;&#x4E32;&#x5B57;&#x7B26;&#x5168;&#x90E8;&#x590D;&#x5236;&#x4E0B;&#x6765;&#xFF0C;&#x5E76;&#x7C98;&#x8D34;&#x5230;&#x521A;&#x521A;&#x7F51;&#x9875;&#x91CC;&#x586B;SSH pub Key&#x7684;&#x5BF9;&#x8BDD;&#x6846;&#x5185;&#x3002;&#x7136;&#x540E;&#x786E;&#x8BA4;&#x3002;<br>&#x7B49;&#x5F85;&#x51E0;&#x79D2;&#x540E;Digital Ocean&#x5C31;&#x80FD;&#x5B8C;&#x6210;&#x57FA;&#x7840;&#x7684;&#x914D;&#x7F6E;&#x4E86;&#x3002;</p>
-<p>&#x6B64;&#x65F6;&#x56DE;&#x5230;&#x672C;&#x5730;&#x8BA1;&#x7B97;&#x673A;&#x7684;&#x865A;&#x62DF;&#x7EC8;&#x7AEF;&#xFF0C;&#x8F93;&#x5165;&#xFF1A;</p>
+</code></pre><p>将会出现一长串字符，结尾是你生成时输入的邮箱地址。将这噫长串字符全部复制下来，并粘贴到刚刚网页里填SSH pub Key的对话框内。然后确认。<br>等待几秒后Digital Ocean就能完成基础的配置了。</p>
+<p>此时回到本地计算机的虚拟终端，输入：</p>
 <pre><code>ssh -t root@YOUR_vps_IP
-</code></pre><p>&#x5176;&#x4E2D;root&#x4E3A;&#x7528;&#x6237;&#x540D;&#xFF0C;@&#x7B26;&#x53F7;&#x540E;&#x9762;&#x4E3A;&#x4F60;&#x7684;vps&#x7684;IP&#x3002;&#x6CA1;&#x6709;&#x610F;&#x5916;&#x5E94;&#x8BE5;&#x5C31;&#x80FD;&#x8FDE;&#x4E0A;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;&#x4E86;&#x3002;</p>
-<h2 id="&#x4E4B;&#x540E;&#x2026;"><a href="#&#x4E4B;&#x540E;&#x2026;" class="headerlink" title="&#x4E4B;&#x540E;&#x2026;"></a>&#x4E4B;&#x540E;&#x2026;</h2><p>&#x5230;&#x8FD9;&#x91CC;&#x57FA;&#x672C;&#x51C6;&#x5907;&#x5DE5;&#x4F5C;&#x5C31;&#x5DEE;&#x4E0D;&#x591A;&#x4E86;&#x3002;&#x76EE;&#x524D;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x6709;&#x4E86;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x5728;&#x672C;&#x5730;&#x901A;&#x8FC7;SSH&#x767B;&#x5F55;&#x7684;VPS&#x3002;&#x4E4B;&#x540E;&#x7684;&#x642D;&#x5EFA;&#x4E0B;&#x7BC7;&#x518D;&#x8BF4;&#x3002;<br>&#x6BCF;&#x6B21;&#x6298;&#x817E;Hexo&#x90FD;&#x662F;&#x5751;&#x591A;&#x5F97;&#x5FC3;&#x7D2F;&#x2026;</p>
-<h3 id="&#x53C2;&#x8003;"><a href="#&#x53C2;&#x8003;" class="headerlink" title="&#x53C2;&#x8003;"></a>&#x53C2;&#x8003;</h3><ul class="ui list">
+</code></pre><p>其中root为用户名，@符号后面为你的vps的IP。没有意外应该就能连上远程服务器了。</p>
+<h2 id="之后…"><a href="#之后…" class="headerlink" title="之后…"></a>之后…</h2><p>到这里基本准备工作就差不多了。目前我们已经有了一个可以在本地通过SSH登录的VPS。之后的搭建下篇再说。<br>每次折腾Hexo都是坑多得心累…</p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
 <li><a href="http://jfamily.me/blog/2016/04/23/github-student-digitalocean/" target="_blank" rel="external">JFamily</a></li>
 </ul>
 
-                        
-                    </div>
+      
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/2017/01/31/Push-Hexo-Blog-to-DigitalOcean-Vps/" class="article-date">
+  <time datetime="2017-01-30T23:29:27.000Z" itemprop="datePublished">2017-01-31</time>
+</a>
 
-                    
-                    
-                    
-
-                    <div class="description post-description">
-    <span class="post-description-item">
-        <time datetime="2017-01-30T23:29:27.000Z" itemprop="datePublished">2017-01-31</time>
-
-    </span>
-    <span class="post-description-item">
+        </li>
         
-
-    <span>
-        <i class="tags icon"></i>
-    </span>
-
-    
-    <span class="ui tiny label">
-        <a href="/tags/Hexo/">Hexo</a>
-    </span>
-
-    
-    <span class="ui tiny label">
-        <a href="/tags/Vps/">Vps</a>
-    </span>
-
-    
-    <span class="ui tiny label">
-        <a href="/tags/DigitalOcean/">DigitalOcean</a>
-    </span>
-
-    
-
-    </span>
-</div>
-
-                </div>
-                
-                <div id="pagination" class="nav-web ui text container pagination">
-
-    <div class="ui stackable two column divided grid container">
-        <div class="row">
-            <div class="column nav-left">
-                
-
-                <a class="ui tiny button disabled"><i class="angle left icon"></i>前一篇</a>
-
-                
-            </div>
-            <div class="column nav-right">
-                
-
-                <a href="/2017/01/01/2016-and-2017/" class="ui tiny button">
-                    
-                    2016 and 2017
-                    
-                    <i class="angle right icon"></i></a>
-                
-            </div>
-        </div>
-    </div>
-
-</div>
-                
-            </div>
-
+          <li>
+            <span class="label">Category:</span>
             
-            <div class="three wide computer three wide tablet column">
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/折腾/">折腾</a>
+  </div>
 
-                <div class="ui sticky article-toc" id="article-toc">
-                    <!-- toc -->
-                    <ol class="ui ordered list"><li><a href="#故事的开始"><span>故事的开始</span></a><ol><li><a href="#VPS的选择"><span>VPS的选择</span></a></li><li><a href="#申请Github学生包"><span>申请Github学生包</span></a></li><li><a href="#Digital-Ocean-VPS的购买"><span>Digital Ocean VPS的购买</span></a></li></ol></li><li><a href="#VPS内的操作系统安装"><span>VPS内的操作系统安装</span></a><ol><li><a href="#操作系统的选择"><span>操作系统的选择</span></a></li><li><a href="#SSH远程登录VPS"><span>SSH远程登录VPS</span></a><ol><li><a href="#本地生成SSH-Keys"><span>本地生成SSH Keys</span></a></li><li><a href="#添加SSH公匙"><span>添加SSH公匙</span></a></li></ol></li></ol></li><li><a href="#之后…"><span>之后…</span></a><ol><li><a href="#参考"><span>参考</span></a></li></ol></li></ol>
-                </div>
 
-            </div>
+          </li>
+        
+        
+          <li>
+            <span class="label">Tag:</span>
             
-
-        </div>
-    </div>
-</div>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DigitalOcean/">DigitalOcean</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vps/">Vps</a></li></ul>
 
 
-<section id="comments">
+          </li>
+        
+        <hr/>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <span id="article-nav-newer" class="article-nav-link-wrap newer"></span>
+  
+  
+    <a href="/2017/01/01/2016-and-2017/" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">2016 and 2017</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+  <section id="comments" class="comments">
     <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by
-                Disqus.</a></noscript>
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
-</section>
+  </section>
 
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        </div>
-        <div class="ui vertical footer segment">
-    <div class="ui center aligned container">
-        <div class="ui inverted section divider"></div>
-        &copy; 2017 <a href="/">KAI_</a>,
-        Powered by <a href="https://github.com/henryhuang/hexo-theme-aloha" target="_blank">Aloha</a> and <a
-                href="http://hexo.io/" target="_blank">Hexo</a>.
+
+
+      </div>
+      
+    <footer id="footer" class="post-footer footer">
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <p>All Rights Reserved by KAI_</p>
+
+
+      </div>
+    </footer>
+
+      
+  <script>
+   var disqus_shortname = 'lessouterrain-hexo';
+   
+   var disqus_url = 'http://kaimaris.com/2017/01/31/Push-Hexo-Blog-to-DigitalOcean-Vps/';
+   
+   (function(){
+     var dsq = document.createElement('script');
+     dsq.type = 'text/javascript';
+     dsq.async = true;
+     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+   })();
+  </script>
+
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+
+
+
+
+
+
+
     </div>
-</div>
-
-    </div>
-
-
-
-
-<!-- scripts list from theme config.yml -->
-
-<script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
-
-<script src="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.js"></script>
-
-<script src="//cdn.bootcss.com/algoliasearch/3.18.1/algoliasearch.min.js"></script>
-
-<script src="//cdn.bootcss.com/algoliasearch-helper-js/2.13.0/algoliasearch.helper.min.js"></script>
-
-<script src="/js/semantic-ui-algolia.js"></script>
-
-<script src="/js/aloha-events.js"></script>
-
-
-
-</body>
+  </body>
 </html>

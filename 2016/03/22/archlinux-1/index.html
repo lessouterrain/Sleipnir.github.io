@@ -1,15 +1,11 @@
-
-
 <!DOCTYPE html>
-<html lang="EN-us">
-<head prefix="og: http://ogp.me/ns#">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <meta name="description" content="null">
-    <title>Arch Linux 折腾记1 | Maris</title>
-
-    <!-- Open Graph -->
-    <meta name="description" content="其实Arch 装上也有那么两个星期了，不过一直都没什么心情写东西，装上后美化啊配置啊啥的也都很坎坷，就拖啊拖的拖到了现在。因为完全的linux新手，加上舍不得win下的游戏（这才是重点吧（误，所以是Win10 和Arch Linux双系统。">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <title>Arch Linux 折腾记1 | Maris</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="其实Arch 装上也有那么两个星期了，不过一直都没什么心情写东西，装上后美化啊配置啊啥的也都很坎坷，就拖啊拖的拖到了现在。因为完全的linux新手，加上舍不得win下的游戏（这才是重点吧（误，所以是Win10 和Arch Linux双系统。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Arch Linux 折腾记1">
 <meta property="og:url" content="http://kaimaris.com/2016/03/22/archlinux-1/index.html">
@@ -23,317 +19,193 @@
 <meta name="twitter:title" content="Arch Linux 折腾记1">
 <meta name="twitter:description" content="其实Arch 装上也有那么两个星期了，不过一直都没什么心情写东西，装上后美化啊配置啊啥的也都很坎坷，就拖啊拖的拖到了现在。因为完全的linux新手，加上舍不得win下的游戏（这才是重点吧（误，所以是Win10 和Arch Linux双系统。">
 <meta name="twitter:image" content="http://i1281.photobucket.com/albums/a510/Kai_sc02/2016-03-21-031355_1920x1080_scrot_zpskizk8qu0.png">
-
-    <script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Person",
-  "email": "mailto:undefined",
-  "image": "undefined",
-  "name": "KAI_",
-  "url": "http://kaimaris.com"
-}
-</script>
-    <script>
-    var algoliaEnabled = false;
-    
-</script>
-
-    
-
-    
-    
-        <link href="https://fonts.gmirror.org/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-    
-    
-    
-        <!-- stylesheets list from config.yml -->
-        
-        <link rel="stylesheet" href="/css/aloha.css">
-        
-        <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.css">
-        
-        <link rel="stylesheet" href="//cdn.bootcss.com/magnific-popup.js/1.1.0/magnific-popup.min.css">
-        
-    
-
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/typing.css">
 </head>
-<body id="body" style="margin-bottom: 0;" class="pushable">
 
-    <div class="ui top fixed menu">
-        <a class="item" id="menu-icon"><i class="sidebar icon"></i></a>
-    </div>
+  
+    <body>
+  
+      <div id="container" class="container">
+        <article id="post-archlinux-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <header id="header" class="header">
+  <nav id="main-nav" class="main-nav">
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+      <a class="main-nav-link" href="/about">About</a>
+    
+      <a class="main-nav-link" href="/rss2.xml">Rss</a>
+    
+  </nav>
+  <nav id="sub-nav">
+    
+  </nav>
+</header>
 
-    <div id="menu-sidebar" class="ui left vertical sidebar menu">
-
-    <div id="sidebar-top">
-        <div class="content">
-            <h3>Maris</h3>
-        </div>
-    </div>
-    <div class="ui container sidebar-card">
-    <div class="ui people shape content">
-        <div class="active side">
-            <div class="ui card">
-                <div class="image">
-                    <img class="ui medium bordered image" src="/images/avatar.jpg">
-                </div>
-                <div class="content">
-                    <a class="header">KAI_</a>
-                    
-                </div>
-                <div class="extra content">
-                    <div class="ui list">
-                        
-                        
-                    </div>
-
-                </div>
-                <div class="extra content">
-                    <div class="ui list">
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-</div>
-
+  <hr/>
+  <div class="article-inner">
     
     
-
-    
-
-    
-    <a href="/index.html" class="item" >
-        <i class="home icon"></i>
-        HOME
-    </a>
-
-    
-    
-
-    
-
-    
-    <a href="/atom.xml" class="item" >
-        <i class="rss icon"></i>
-        FEED
-    </a>
-
-    
-    
-
-    
-
-    
-    <a href="/archives" class="item" >
-        <i class="archive icon"></i>
-        ARCHIVE
-    </a>
-
-    
-    
-
-    
-
-    
-    <a href="/about" class="item" >
-        <i class="user icon"></i>
-        关于
-    </a>
-
-    
-
-    
-</div>
-
-    <div class="pusher body-content">
-        <div id="content" class="ui main container">
-            <!--<div class="ui one column grid">-->
-                <!--<div class="column">-->
-                    <!--<div class="ui main container">-->
-                        <div id="post-archlinux-1" class="ui main container article-type-post">
-
-    
-
-    <div class="ui divided grid">
-
-        <div class="two column row" id="article-content">
-
-            <div class="thirteen wide computer thirteen wide tablet sixteen wide mobile column">
-                
-
-<h1 class="ui header">
-    
-    Arch Linux 折腾记1
-</h1>
-
-
-
-                <div class="article-inner">
-
-                    <div class="article-entry" itemprop="articleBody">
-                        
-                        <p>&#x5176;&#x5B9E;Arch &#x88C5;&#x4E0A;&#x4E5F;&#x6709;&#x90A3;&#x4E48;&#x4E24;&#x4E2A;&#x661F;&#x671F;&#x4E86;&#xFF0C;&#x4E0D;&#x8FC7;&#x4E00;&#x76F4;&#x90FD;&#x6CA1;&#x4EC0;&#x4E48;&#x5FC3;&#x60C5;&#x5199;&#x4E1C;&#x897F;&#xFF0C;&#x88C5;&#x4E0A;&#x540E;&#x7F8E;&#x5316;&#x554A;&#x914D;&#x7F6E;&#x554A;&#x5565;&#x7684;&#x4E5F;&#x90FD;&#x5F88;&#x574E;&#x5777;&#xFF0C;&#x5C31;&#x62D6;&#x554A;&#x62D6;&#x7684;&#x62D6;&#x5230;&#x4E86;&#x73B0;&#x5728;&#x3002;<br>&#x56E0;&#x4E3A;&#x5B8C;&#x5168;&#x7684;linux&#x65B0;&#x624B;&#xFF0C;&#x52A0;&#x4E0A;&#x820D;&#x4E0D;&#x5F97;win&#x4E0B;&#x7684;&#x6E38;&#x620F;&#xFF08;&#x8FD9;&#x624D;&#x662F;&#x91CD;&#x70B9;&#x5427;&#xFF08;&#x8BEF;&#xFF0C;&#x6240;&#x4EE5;&#x662F;Win10 &#x548C;Arch Linux&#x53CC;&#x7CFB;&#x7EDF;&#x3002;</p>
-<a id="more"></a>
-<p>&#x55EF;&#xFF0C;&#x5148;&#x5F3A;&#x8C03;&#x4E00;&#x4E0B;&#xFF0C;&#x672C;&#x4EBA;&#x975E;&#x8BA1;&#x7B97;&#x673A;&#x76F8;&#x5173;&#x4E13;&#x4E1A;&#xFF0C;&#x7EAF;&#x6587;&#x79D1;&#x751F;&#xFF0C;&#x4E0D;&#x61C2;&#x4EFB;&#x4F55;&#x7A0B;&#x5E8F;&#x8BED;&#x8A00;&#x7EAF;&#x5C5E;&#x7231;&#x6298;&#x817E;&#x3002;<br>Arch&#x554A;&#xFF0C;&#x8981;&#x8BF4;&#x96BE;&#x88C5;&#x5176;&#x5B9E;&#x771F;&#x7684;&#x8FD8;&#x597D;&#xFF0C;&#x53EA;&#x8981;&#x6709;&#x8010;&#x5FC3;&#x5427;&#x3002;&#x82F1;&#x6587;&#x591F;&#x597D;&#x80FD;&#x770B;&#x61C2;&#x5B98;&#x65B9;wiki&#xFF0C;&#x8BA1;&#x7B97;&#x673A;&#x6709;&#x70B9;&#x76F8;&#x5E94;&#x7684;&#x57FA;&#x7840;&#x77E5;&#x8BC6;&#xFF0C;&#x6BD4;&#x5982;&#x81F3;&#x5C11;&#x8981;&#x77E5;&#x9053;&#x786C;&#x76D8;&#x5206;&#x533A;&#x548C;&#x6302;&#x8F7D;&#x4EE5;&#x53CA;&#x542F;&#x52A8;&#x5F15;&#x5BFC;&#x4E4B;&#x7C7B;&#x7684;&#x8FD9;&#x4E48;&#x4E9B;&#x4E2A;&#x4E1C;&#x897F;&#x662F;&#x5E72;&#x561B;&#x7684;&#x3002;<br>&#x96BE;&#x70B9;&#x5176;&#x5B9E;&#x5C31;&#x8FD8;&#x662F;&#x7EAF;&#x547D;&#x4EE4;&#x884C;&#x7684;&#x754C;&#x9762;&#x5427;&#xFF0C;&#x6BD5;&#x7ADF;&#x975E;&#x7A0B;&#x5E8F;&#x5458;&#x7684;&#x7535;&#x8111;&#x4F7F;&#x7528;&#x8005;&#xFF0C;&#x5927;&#x534A;&#x90FD;&#x662F;&#x88AB;win&#x7684;GUI&#x50BB;&#x74DC;&#x5B89;&#x88C5;&#x754C;&#x9762;&#x7ED9;&#x517B;&#x5A07;&#x4E86;&#xFF0C;&#x4E00;&#x770B;&#x5230;&#x547D;&#x4EE4;&#x884C;&#x5C31;&#x89C9;&#x5F97;&#x201C;&#x554A;&#x597D;&#x96BE;&#xFF01;&#x597D;&#x590D;&#x6742;&#xFF01;&#x201D;<br>&#x8003;&#x8651;&#x5230;&#x6216;&#x8BB8;&#x8FD8;&#x6709;&#x6BD4;&#x6211;&#x66F4;&#x5C0F;&#x767D;&#x7684;&#xFF0C;&#x59D1;&#x4E14;&#x4E5F;&#x7B97;&#x662F;&#x4E0D;&#x7B80;&#x5355;&#x5427;&#xFF0C;&#x4F46;&#x662F;&#x4E5F;&#x80AF;&#x5B9A;&#x6CA1;&#x6709;&#x90A3;&#x4E48;&#x6050;&#x6016;&#x5C31;&#x662F;&#x4E86;&#x3002;</p>
-<p>&#x7B2C;&#x4E00;&#x6B21;&#x88C5;&#x6211;&#x5176;&#x5B9E;&#x4E5F;&#x5F88;&#x5FD0;&#x5FD1;&#xFF0C;&#x522B;&#x7684;&#x5012;&#x8FD8;&#x597D;&#xFF0C;&#x6700;&#x6015;&#x7684;&#x5C31;&#x662F;&#x5F15;&#x5BFC;&#xFF0C;&#x4E0D;&#x8FC7;&#x6309;&#x7740;&#x5B98;&#x65B9;&#x7684;wiki&#x6765;&#xFF0C;&#x52A0;&#x4E0A;google&#x4E86;&#x4E00;&#x4E9B;&#x5176;&#x4ED6;geek&#x7684;blog&#x4E0A;&#x63D0;&#x5230;&#x7684;&#x53CC;&#x7CFB;&#x7EDF;&#x5B89;&#x88C5;&#x6559;&#x7A0B;&#xFF0C;&#x5012;&#x4E5F;&#x662F;&#x987A;&#x5229;&#x5F04;&#x4E0B;&#x6765;&#x4E86;&#x3002;<br>&#x63A8;&#x8350;&#x4E24;&#x7BC7;&#x5427;&#xFF0C;</p>
-<ul class="ui list">
-<li><a href="https://wind.moe/article/15" target="_blank" rel="external">Arch&#x53CC;&#x7CFB;&#x7EDF;&#x5B89;&#x88C5;&#x7B14;&#x8BB0;</a></li>
-<li><a href="https://blog.icehoney.me/posts/2015-10-28-UEFI-dual-boot-Archlinux" target="_blank" rel="external">Archlinux&#x548C;Win10&#x5728;UEFI&#x4E0B;&#x53CC;&#x542F;&#x52A8;</a></li>
-</ul>
-<p>&#x56E0;&#x4E3A;&#x5F88;&#x65E9;&#x5C31;&#x60F3;&#x8BD5;&#x7740;&#x88C5;Linux&#x73A9;&#x73A9;&#x5B66;&#x5B66;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x5F53;&#x65F6;&#x4E70;&#x7535;&#x8111;&#x7684;&#x65F6;&#x5019;&#x9009;&#x4E3B;&#x677F;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x7279;&#x610F;&#x9009;&#x4E86;&#x652F;&#x6301;UEFI&#x6A21;&#x5F0F;&#x7684;&#xFF0C;&#x4E4B;&#x540E;&#x7535;&#x8111;&#x4E70;&#x56DE;&#x6765;&#x540E;&#x88C5;Win10&#x7684;&#x65F6;&#x5019;&#x4E5F;&#x7279;&#x610F;&#x7528;&#x7684;UEFI&#x6A21;&#x5F0F;&#xFF0C;&#x5927;&#x6982;&#x4E5F;&#x7701;&#x4E86;&#x4E0D;&#x5C11;&#x4E8B;&#x3002;<br>&#x987A;&#x4FBF;&#x4E00;&#x63D0;&#xFF0C;win10&#x6211;&#x88C5;&#x5728;&#x4E86;SSD&#x4E0A;&#xFF0C;Arch Linux&#x672C;&#x8EAB;&#x5C31;&#x76F8;&#x5F53;&#x7B80;&#x6D01;&#x4E5F;&#x4E0D;&#x5360;&#x8D44;&#x6E90;&#xFF0C;&#x52A0;&#x4E0A;&#x53EA;&#x662F;&#x5C1D;&#x8BD5;&#x7684;&#x5B66;&#x4E60;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x5C31;&#x6682;&#x65F6;&#x5148;&#x5206;&#x4E86;100GB&#x666E;&#x901A;&#x786C;&#x76D8;&#x5BB9;&#x91CF;&#x7ED9;&#x4E86;Arch&#x3002;</p>
-<p>&#x5B89;&#x88C5;&#x4E0A;&#x6211;&#x4F3C;&#x4E4E;&#x6CA1;&#x5565;&#x53D1;&#x8A00;&#x6743;&#xFF0C;&#x90FD;&#x662F;&#x5BF9;&#x7740;&#x6559;&#x7A0B;&#x4E00;&#x6B65;&#x6B65;&#x6765;&#xFF0C;&#x4E5F;&#x6CA1;&#x78B0;&#x4E0A;&#x5565;&#x9A71;&#x52A8;&#x4E4B;&#x7C7B;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x5C31;&#x7A0D;&#x5FAE;&#x8BB2;&#x8BB2;&#x4E4B;&#x540E;&#x7684;&#x4E2A;&#x4EBA;&#x914D;&#x7F6E;&#x5427;&#x3002;</p>
-<ul class="ui list">
-<li>&#x7A97;&#x53E3;&#x7BA1;&#x7406;&#x5668;&#xFF1A; i3wm</li>
-<li>&#x865A;&#x62DF;&#x7EC8;&#x7AEF;&#xFF1A; urxvt&#xFF08;&#x5373;rxvt-unicode&#xFF09;</li>
-<li>&#x6D4F;&#x89C8;&#x5668;&#xFF1A;Chromium&#xFF08;win&#x4E0B;&#x4E5F;&#x7528;&#x7684;chrome&#xFF0C;GOOGLE&#x5927;&#x6CD5;&#x597D;&#xFF01;&#xFF09;&#xFF0C;Firefox&#x5907;&#x7528;</li>
-<li>&#x804A;&#x5929;&#xFF1A;Telegram&#xFF0C;&#x8981;&#x7528;&#x5230;qq&#x6216;Line&#x7684;&#x65F6;&#x5019;&#x7528;&#x624B;&#x673A;&#xFF0C;&#x5B9E;&#x5728;&#x4E0D;&#x884C;&#x624D;&#x6362;win</li>
-<li>IRC&#xFF1A;Weechat&#xFF08;&#x6211;&#x662F;&#x5C0F;&#x767D;&#x770B;&#x5BA2;&#xFF09;</li>
-<li>&#x89C6;&#x9891;&#x64AD;&#x653E;&#x5668;&#xFF1A;mplayer&#xFF0C;mpv&#x5907;&#x7528;</li>
-<li>&#x6587;&#x6863;&#xFF1A;&#x76EE;&#x524D;Linux&#x4E0B;&#x4E3B;&#x529B;&#x662F;<a href="https://stackedit.io" target="_blank" rel="external">StackEdit.io</a>&#x6216;&#x76F4;&#x63A5;Vim&#xFF0C;&#x7528;markdown&#x7801;&#x6587;&#x3002;&#x88C5;&#x4E86;LibreOffice&#x5907;&#x7528;&#x4F46;&#x8FD8;&#x6CA1;&#x6253;&#x5F00;&#x8FC7;&#xFF0C;&#x975E;&#x8981;&#x7528;&#x5230;&#x7684;&#x65F6;&#x5019;&#x6211;&#x591A;&#x534A;&#x8FD8;&#x662F;&#x4F1A;&#x6362;&#x56DE;win&#x5427;&#x6682;&#x65F6;&#x3002;</li>
-<li>&#x97F3;&#x4E50;&#xFF1A;&#x591A;&#x7528;spotify&#x542C;&#x5728;&#x7EBF;&#xFF0C;&#x8C46;&#x74E3;FM&#x4E8C;&#x53F7;&#x6218;&#x529B;&#xFF0C;&#x672C;&#x5730;&#x88C5;&#x4E86;Deadbeef&#x6682;&#x65F6;&#x6CA1;&#x7528;&#x5230;&#x8FC7;&#xFF0C;&#x6BD5;&#x7ADF;&#x6211;&#x542C;&#x6B4C;&#x7684;&#x5DE5;&#x5177;&#x633A;&#x591A;&#xFF08;&#x5927;&#x96FE;</li>
-</ul>
-<p>&#x56FE;&#x5F62;&#x754C;&#x9762;&#x9700;&#x8981;&#x5148;&#x5728;&#x7EC8;&#x7AEF;&#x4E0B;&#x88C5;X&#x548C;&#x4E00;&#x4E2A;WM&#xFF08;Window Manager &#x7A97;&#x53E3;&#x7BA1;&#x7406;&#x5668;&#xFF09;&#x6216;DE&#xFF08;Desktop Environment &#x684C;&#x9762;&#x73AF;&#x5883;&#xFF09;&#x524D;&#x8005;&#x6BD4;&#x5982;awesome&#x6216;i3&#xFF0C;&#x90FD;&#x5C5E;&#x4E8E;&#x5E73;&#x94FA;&#x5F0F;&#x3002;&#x540E;&#x8005;&#x5C31;&#x662F;&#x4E00;&#x6574;&#x5957;&#x7684;&#x684C;&#x9762;&#x4E86;&#xFF0C;&#x6709;&#x540D;&#x7684;KDE&#x548C;Gnome&#xFF0C;&#x6216;&#x8005;&#x662F;&#x8F7B;&#x91CF;&#x7EA7;&#x7684;XFACE &#x7B49;&#x7B49;&#x3002;awesome&#x867D;&#x7136;&#x636E;&#x8BF4;&#x5F88;&#x5F3A;&#x5927;&#x4F46;&#x662F;&#x662F;lua&#x7684;&#x811A;&#x672C;&#x914D;&#x7F6E;&#xFF0C;&#x7136;&#x800C;&#x8FD9;&#x4E1C;&#x897F;&#x8001;&#x5B50;&#x534A;&#x53E5;&#x90FD;&#x770B;&#x4E0D;&#x61C2;&#xFF0C;&#x5E73;&#x94FA;&#x91CC;&#x5C31;&#x9009;&#x4E86;i3&#x4E86;&#x3002;<br>&#x865A;&#x62DF;&#x7EC8;&#x7AEF;&#x9009;urxvt&#x7684;&#x539F;&#x56E0;&#x5C31;&#x662F;&#x8F7B;&#x91CF;&#x7EA7;&#xFF0B;&#x652F;&#x6301;&#x900F;&#x660E;&#x4E86;&#x3002;<br>&#x4F5C;&#x4E3A;&#x4F2A;Geek&#x6765;&#x8BF4;&#xFF0C;&#x4F01;&#x9E45;&#x4E00;&#x5B9A;&#x662F;&#x6211;&#x80FD;&#x4E0D;&#x7528;&#x5C31;&#x4E0D;&#x7528;&#x7684;&#x4E1C;&#x897F;&#x4E4B;&#x4E00;&#x4E86;&#x3002;&#x4F46;&#x662F;&#x8981;&#x8BF4;&#x771F;&#x7684;&#x5B8C;&#x5168;&#x4E22;&#x4E0B;&#x4E5F;&#x4E0D;&#x73B0;&#x5B9E;&#xFF0C;&#x6BD5;&#x7ADF;&#x4E0D;&#x80FD;&#x6307;&#x671B;&#x597D;&#x53CB;&#x5C24;&#x5176;&#x662F;&#x7FA4;&#x91CC;&#x7684;&#x4EBA;&#x4E3A;&#x6211;&#x4E00;&#x4E2A;&#x4EBA;&#x53BB;&#x518D;&#x5F04;&#x4E2A;&#x65B0;&#x8F6F;&#x4EF6;&#x53EA;&#x8DDF;&#x6211;&#x4E00;&#x4E2A;&#x4EBA;&#x8054;&#x7CFB;&#x3002;&#x867D;&#x7136;&#x8FD9;&#x6837;&#x5BFC;&#x81F4;&#x73B0;&#x5728;&#x7684;&#x540E;&#x679C;&#x5C31;&#x662F;&#x6211;&#x624B;&#x673A;&#x548C;&#x7535;&#x8111;&#x4E0A;&#x51E0;&#x4E4E;&#x6240;&#x6709;&#x53EB;&#x5F97;&#x4E0A;&#x540D;&#x5B57;&#x7684;&#x5373;&#x65F6;&#x901A;&#x8BAF;&#x5DE5;&#x5177;&#x90FD;&#x6709;&#x5728;&#x7528;&#xFF0C;&#x6BCF;&#x4E2A;&#x4E0A;&#x9762;&#x90FD;&#x662F;&#x4E24;&#x4E09;&#x4E2A;&#x5E38;&#x7528;&#x7684;&#x8054;&#x7CFB;&#x4EBA;&#x2026;&#x2026;<br>&#x4E8E;&#x662F;&#x73B0;&#x5728;&#x78B0;&#x5230;&#x65B0;&#x8BA4;&#x8BC6;&#x7684;&#x95EE;&#x52A0;&#x8054;&#x7CFB;&#x65B9;&#x5F0F;&#x7684;&#x65F6;&#x5019;&#x90FD;&#x53D8;&#x6210;&#x4E86;&#x6211;&#x95EE;&#x5BF9;&#x65B9;&#xFF0C;&#x201C;&#x4F60;&#x5E38;&#x7528;&#x4EC0;&#x4E48;&#xFF1F;&#x4F60;&#x7528;&#x4EC0;&#x4E48;&#x6211;&#x52A0;&#x4F60;&#x54EA;&#x4E2A;&#x3002;&#x201D;<br>&#x56E0;&#x4E3A;&#x6211;&#x51E0;&#x4E4E;&#x90FD;&#x6709;&#x2026;&#x2026;&#x54B3;&#x54B3;</p>
-<p>&#x8BF4;&#x8D77;&#x865A;&#x62DF;&#x7EC8;&#x7AEF;&#x7684;&#x534A;&#x900F;&#x660E;&#xFF0C;&#x8BF4;&#x4E2A;&#x5F88;&#x8822;&#x7684;&#x5C0F;&#x63D2;&#x66F2;&#x3002;&#x4E4B;&#x524D;&#x5BF9;&#x7740;wiki&#x548C;&#x5176;&#x4ED6;blog&#x7684;&#x6559;&#x7A0B;&#x5565;&#x7684;&#x6298;&#x817E;&#x4E86;&#x5F88;&#x4E45;&#x90FD;&#x6CA1;&#x6548;&#x679C;&#xFF0C;&#x8BE5;&#x5199;&#x4E0A;&#x53BB;&#x7684;&#x914D;&#x7F6E;&#x53C2;&#x6570;&#x90FD;&#x5199;&#x4E86;&#x7136;&#x800C;&#x5C31;&#x662F;&#x6CA1;&#x6548;&#x679C;&#xFF0C;&#x6700;&#x540E;&#x65E0;&#x5948;&#x5730;&#x4E00;&#x4E2A;&#x4E00;&#x4E2A;&#x5B57;&#x6BCD;&#x53BB;&#x5BF9;&#x7167;&#x53D1;&#x73B0;&#xFF0C;</p>
-<pre><code>URxvt.Transparent:true
-</code></pre><p>&#x91CC;&#x9762;&#x7684;&#x90A3;&#x4E2A;true&#xFF0C;&#x6211;&#x4E00;&#x76F4;&#x62FC;&#x6210;&#x4E86;Ture&#x2026;&#x2026;<br>&#x8BA9;&#x6211;&#x518D;&#x53BB;&#x81EA;&#x6211;&#x9119;&#x89C6;&#x4E00;&#x4F1A;&#x513F;</p>
-<p>&#x6700;&#x540E;&#x8D34;&#x51E0;&#x5F20;&#x76EE;&#x524D;&#x6298;&#x817E;&#x51FA;&#x6765;&#x7684;&#x6210;&#x679C;&#x56FE;&#x5427;&#x3002;&#x4F5C;&#x4E3A;&#x5C0F;&#x767D;&#x6765;&#x8BF4;&#xFF0C;&#x6298;&#x817E;&#x5230;&#x8FD9;&#x4E2A;&#x7A0B;&#x5EA6;&#x5DF2;&#x7ECF;&#x5F88;&#x6709;&#x6210;&#x5C31;&#x611F;&#x4E86;&#x3002;</p>
-<p><a class="magnific-img" href="http://i1281.photobucket.com/albums/a510/Kai_sc02/2016-03-21-031355_1920x1080_scrot_zpskizk8qu0.png"><img src="http://i1281.photobucket.com/albums/a510/Kai_sc02/2016-03-21-031355_1920x1080_scrot_zpskizk8qu0.png" alt="Weechat #Archlinux-cn" class="ui centered image"></a></p>
-<p><a class="magnific-img" href="http://i1281.photobucket.com/albums/a510/Kai_sc02/2016-03-21-043456_1920x1080_scrot_zpsjikw4pda.png"><img src="http://i1281.photobucket.com/albums/a510/Kai_sc02/2016-03-21-043456_1920x1080_scrot_zpsjikw4pda.png" alt="Urxvt" class="ui centered image"></a></p>
-<p><a class="magnific-img" href="http://i1281.photobucket.com/albums/a510/Kai_sc02/2016-03-22-194505_1920x1080_scrot_zpshxrj4bvf.png"><img src="http://i1281.photobucket.com/albums/a510/Kai_sc02/2016-03-22-194505_1920x1080_scrot_zpshxrj4bvf.png" alt="StackEdit.io" class="ui centered image"></a></p>
-<p>&#x6700;&#x540E;&#xFF0C;&#x5E0C;&#x671B;&#x8FD9;&#x4E2A;ArchLinux&#x6298;&#x817E;&#x8BB0;&#x8FD8;&#x4F1A;&#x6709;2&#x3002;<br>&#x4EE5;&#x53CA;&#xFF0C; &#x4E4B;&#x540E;&#x6211;&#x8FD8;&#x6709;&#x52A8;&#x529B;&#x53BB;&#x5B8C;&#x6210;&#x201C;&#x987A;&#x4FBF;&#x81EA;&#x5B66;&#x4E00;&#x4E0B;C&#x8BED;&#x8A00;&#x201D;&#x7684;&#x7A7A;&#x8BDD;&#x3002;</p>
-
-                        
-                    </div>
-
-                    
-                    
-                    
-
-                    <div class="description post-description">
-    <span class="post-description-item">
-        <time datetime="2016-03-22T17:05:43.000Z" itemprop="datePublished">2016-03-22</time>
-
-    </span>
-    <span class="post-description-item">
+      <header class="article-header">
         
+  
+    <h1 class="article-title" itemprop="name">
+      Arch Linux 折腾记1
+    </h1>
+  
 
-    <span>
-        <i class="tags icon"></i>
-    </span>
-
+      </header>
     
-    <span class="ui tiny label">
-        <a href="/tags/archlinux/">archlinux</a>
-    </span>
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <p>其实Arch 装上也有那么两个星期了，不过一直都没什么心情写东西，装上后美化啊配置啊啥的也都很坎坷，就拖啊拖的拖到了现在。<br>因为完全的linux新手，加上舍不得win下的游戏（这才是重点吧（误，所以是Win10 和Arch Linux双系统。</p>
+<a id="more"></a>
+<p>嗯，先强调一下，本人非计算机相关专业，纯文科生，不懂任何程序语言纯属爱折腾。<br>Arch啊，要说难装其实真的还好，只要有耐心吧。英文够好能看懂官方wiki，计算机有点相应的基础知识，比如至少要知道硬盘分区和挂载以及启动引导之类的这么些个东西是干嘛的。<br>难点其实就还是纯命令行的界面吧，毕竟非程序员的电脑使用者，大半都是被win的GUI傻瓜安装界面给养娇了，一看到命令行就觉得“啊好难！好复杂！”<br>考虑到或许还有比我更小白的，姑且也算是不简单吧，但是也肯定没有那么恐怖就是了。</p>
+<p>第一次装我其实也很忐忑，别的倒还好，最怕的就是引导，不过按着官方的wiki来，加上google了一些其他geek的blog上提到的双系统安装教程，倒也是顺利弄下来了。<br>推荐两篇吧，</p>
+<ul>
+<li><a href="https://wind.moe/article/15" target="_blank" rel="external">Arch双系统安装笔记</a></li>
+<li><a href="https://blog.icehoney.me/posts/2015-10-28-UEFI-dual-boot-Archlinux" target="_blank" rel="external">Archlinux和Win10在UEFI下双启动</a></li>
+</ul>
+<p>因为很早就想试着装Linux玩玩学学了，所以当时买电脑的时候选主板的时候就特意选了支持UEFI模式的，之后电脑买回来后装Win10的时候也特意用的UEFI模式，大概也省了不少事。<br>顺便一提，win10我装在了SSD上，Arch Linux本身就相当简洁也不占资源，加上只是尝试的学习，因此我就暂时先分了100GB普通硬盘容量给了Arch。</p>
+<p>安装上我似乎没啥发言权，都是对着教程一步步来，也没碰上啥驱动之类的问题，就稍微讲讲之后的个人配置吧。</p>
+<ul>
+<li>窗口管理器： i3wm</li>
+<li>虚拟终端： urxvt（即rxvt-unicode）</li>
+<li>浏览器：Chromium（win下也用的chrome，GOOGLE大法好！），Firefox备用</li>
+<li>聊天：Telegram，要用到qq或Line的时候用手机，实在不行才换win</li>
+<li>IRC：Weechat（我是小白看客）</li>
+<li>视频播放器：mplayer，mpv备用</li>
+<li>文档：目前Linux下主力是<a href="https://stackedit.io" target="_blank" rel="external">StackEdit.io</a>或直接Vim，用markdown码文。装了LibreOffice备用但还没打开过，非要用到的时候我多半还是会换回win吧暂时。</li>
+<li>音乐：多用spotify听在线，豆瓣FM二号战力，本地装了Deadbeef暂时没用到过，毕竟我听歌的工具挺多（大雾</li>
+</ul>
+<p>图形界面需要先在终端下装X和一个WM（Window Manager 窗口管理器）或DE（Desktop Environment 桌面环境）前者比如awesome或i3，都属于平铺式。后者就是一整套的桌面了，有名的KDE和Gnome，或者是轻量级的XFACE 等等。awesome虽然据说很强大但是是lua的脚本配置，然而这东西老子半句都看不懂，平铺里就选了i3了。<br>虚拟终端选urxvt的原因就是轻量级＋支持透明了。<br>作为伪Geek来说，企鹅一定是我能不用就不用的东西之一了。但是要说真的完全丢下也不现实，毕竟不能指望好友尤其是群里的人为我一个人去再弄个新软件只跟我一个人联系。虽然这样导致现在的后果就是我手机和电脑上几乎所有叫得上名字的即时通讯工具都有在用，每个上面都是两三个常用的联系人……<br>于是现在碰到新认识的问加联系方式的时候都变成了我问对方，“你常用什么？你用什么我加你哪个。”<br>因为我几乎都有……咳咳</p>
+<p>说起虚拟终端的半透明，说个很蠢的小插曲。之前对着wiki和其他blog的教程啥的折腾了很久都没效果，该写上去的配置参数都写了然而就是没效果，最后无奈地一个一个字母去对照发现，</p>
+<pre><code>URxvt.Transparent:true
+</code></pre><p>里面的那个true，我一直拼成了Ture……<br>让我再去自我鄙视一会儿</p>
+<p>最后贴几张目前折腾出来的成果图吧。作为小白来说，折腾到这个程度已经很有成就感了。</p>
+<p><img src="http://i1281.photobucket.com/albums/a510/Kai_sc02/2016-03-21-031355_1920x1080_scrot_zpskizk8qu0.png" alt="Weechat #Archlinux-cn"></p>
+<p><img src="http://i1281.photobucket.com/albums/a510/Kai_sc02/2016-03-21-043456_1920x1080_scrot_zpsjikw4pda.png" alt="Urxvt"></p>
+<p><img src="http://i1281.photobucket.com/albums/a510/Kai_sc02/2016-03-22-194505_1920x1080_scrot_zpshxrj4bvf.png" alt="StackEdit.io"></p>
+<p>最后，希望这个ArchLinux折腾记还会有2。<br>以及， 之后我还有动力去完成“顺便自学一下C语言”的空话。</p>
 
-    
-    <span class="ui tiny label">
-        <a href="/tags/win10与linux双系统/">win10与linux双系统</a>
-    </span>
-
-    
-
-    </span>
-</div>
-
-                </div>
-                
-                <div id="pagination" class="nav-web ui text container pagination">
-
-    <div class="ui stackable two column divided grid container">
-        <div class="row">
-            <div class="column nav-left">
-                
-
-                <a href="/2016/04/23/ArchLinux2-and-new-Hexo-1/" class="ui tiny button">
-
-                    <i class="angle left icon"></i>
-                    
-                    Arch Linux 折騰記2
-                    
-
-                </a>
-
-                
-            </div>
-            <div class="column nav-right">
-                
-
-                <a href="/2015/12/27/The-Begin-of-LP/" class="ui tiny button">
-                    
-                    The Begin of LP
-                    
-                    <i class="angle right icon"></i></a>
-                
-            </div>
-        </div>
+      
     </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/2016/03/22/archlinux-1/" class="article-date">
+  <time datetime="2016-03-22T17:05:43.000Z" itemprop="datePublished">2016-03-22</time>
+</a>
 
-</div>
-                
-            </div>
-
+        </li>
+        
+          <li>
+            <span class="label">Category:</span>
             
-            <div class="three wide computer three wide tablet column">
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/折腾/">折腾</a>
+  </div>
 
-                <div class="ui sticky article-toc" id="article-toc">
-                    <!-- toc -->
-                    
-                </div>
 
-            </div>
+          </li>
+        
+        
+          <li>
+            <span class="label">Tag:</span>
             
-
-        </div>
-    </div>
-</div>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/archlinux/">archlinux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/win10与linux双系统/">win10与linux双系统</a></li></ul>
 
 
-<section id="comments">
+          </li>
+        
+        <hr/>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <a href="/2016/04/23/ArchLinux2-and-new-Hexo-1/" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Arch Linux 折騰記2
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/12/27/The-Begin-of-LP/" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">The Begin of LP</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+  <section id="comments" class="comments">
     <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by
-                Disqus.</a></noscript>
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
-</section>
+  </section>
 
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        </div>
-        <div class="ui vertical footer segment">
-    <div class="ui center aligned container">
-        <div class="ui inverted section divider"></div>
-        &copy; 2017 <a href="/">KAI_</a>,
-        Powered by <a href="https://github.com/henryhuang/hexo-theme-aloha" target="_blank">Aloha</a> and <a
-                href="http://hexo.io/" target="_blank">Hexo</a>.
+
+
+      </div>
+      
+    <footer id="footer" class="post-footer footer">
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <p>All Rights Reserved by KAI_</p>
+
+
+      </div>
+    </footer>
+
+      
+  <script>
+   var disqus_shortname = 'lessouterrain-hexo';
+   
+   var disqus_url = 'http://kaimaris.com/2016/03/22/archlinux-1/';
+   
+   (function(){
+     var dsq = document.createElement('script');
+     dsq.type = 'text/javascript';
+     dsq.async = true;
+     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+   })();
+  </script>
+
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+
+
+
+
+
+
+
     </div>
-</div>
-
-    </div>
-
-
-
-
-<!-- scripts list from theme config.yml -->
-
-<script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
-
-<script src="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.js"></script>
-
-<script src="//cdn.bootcss.com/algoliasearch/3.18.1/algoliasearch.min.js"></script>
-
-<script src="//cdn.bootcss.com/algoliasearch-helper-js/2.13.0/algoliasearch.helper.min.js"></script>
-
-<script src="/js/semantic-ui-algolia.js"></script>
-
-<script src="/js/aloha-events.js"></script>
-
-
-
-</body>
+  </body>
 </html>
